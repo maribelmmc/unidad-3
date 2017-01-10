@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="tesiss/form-tesiss.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="recetas/list-recetas.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="pofesores/form-profesores.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="sources/list-sources.xhtml" x="8" y="405" zoom="true"/>
+        <Node id="roles/form-roles.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="grupos/list-grupos.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="medicamentos/form-medicamentos.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="trees/form-trees.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="usuarios/list-usuarios.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="modulos/list-modulos.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="tesiss/list-tesiss.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="materias/form-materias.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="templates/template.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="roles/list-roles.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="profesores/form-profesores.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="grupos/form-grupos.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="*" x="633" y="306" zoom="false"/>
+        <Node id="sources/form-sources.xhtml" x="323" y="262" zoom="true"/>
+        <Node id="profesores/list-profesores.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="recetas/form-recetas.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="login.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="estudiantes/list-estudiantes.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="trees/list-trees.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="usuarios/form-usuarios.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="modulos/form-modulos.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="estudiantes/form-estudiantes.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="medicamentos/list-medicamentos.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="materias/list-materias.xhtml" x="1650" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
