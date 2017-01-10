@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.treeFormHeader}</title>
+    </h:head>
+    <h:body>
+       <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h1>#{str.treeListTitle}</h1>
+                <h:form>
+                    <p:commandButton value="#{str.buttonAdd}"
+                                     action="#{treeBean.iniciar()}"></p:commandButton>
+                </h:form>
+                <p:dataTable value="#{treeBean.trees}" var="e">
+                             <p:column headerText="#{str.action}">
+                                 <h:form>
+                             <p:commandButton value="#{str.buttonEdit}"
+                                              action="#{treeBean.editar(e)}"></p:commandButton>
+                                 </h:form>
+                    </p:column>
+                    <p:column headerText="#{str.treeNameHeader}">
+                        <p:outputLabel value="#{e.nameTree}"></p:outputLabel>
+                    </p:column>
+                    
+                    <p:column headerText="#{str.descriptionHeader}">
+                        <p:outputLabel value="#{e.description}"></p:outputLabel>
+                    </p:column>
+                    
+                    
+                    <p:column headerText="#{str.sourceNameHeader}">
+                        <p:outputLabel value="#{e.source.sourceDbName}"></p:outputLabel>
+                    </p:column>
+                 </p:dataTable>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

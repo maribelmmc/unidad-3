@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>#{str.medicamentoFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.medicamentoFormHeader}</h2>
+                <p:fieldset legend="#{str.medicamentoLegendForm}">
+                    <h:form>
+                        <p:inputText placeholder="#{str.medicamentoNamePrompt}"
+                                     value="#{medicamentoBean.medicamento.nombre}"></p:inputText>
+                        <p:inputText placeholder="#{str.typePrompt}"
+                                     value="#{medicamentoBean.medicamento.tipo}"></p:inputText> 
+                        <p:inputText placeholder="#{str.cantPrompt}"
+                                     value="#{medicamentoBean.medicamento.cantidad}"></p:inputText>
+
+                        <p:commandButton value="#{str.buttonSave}"
+                                         action="#{medicamentoBean.guardar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonDelete}"
+                                         action="#{medicamentoBean.eliminar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonCancel}"
+                                         action="#{medicamentoBean.cancelar()}"></p:commandButton>
+                    </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
