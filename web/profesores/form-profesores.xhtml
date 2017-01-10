@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.profesorFormHeader}</title>
+        
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.profesorFormHeader}</h2>
+                <p:fieldset legend="#{str.profesorLegendForm}">
+                    <h:form>
+                        <h:panelGrid columns="1">
+                            <p:inputText placeholder="#{str.profesorNamePrompt}"
+                                         value="#{profesorBean.profesor.nombreProfesor}"></p:inputText> 
+                                         <p:inputText placeholder="#{str.lastNamePrompt}"
+                                                      value="#{profesorBean.profesor.apellido}"></p:inputText>
+                            <p:inputText placeholder="#{str.telephonePrompt}"
+                                         value="#{profesorBean.profesor.telefono}"></p:inputText>
+
+                                         <p:selectOneMenu value="#{profesorBean.profesor.materia.idmateria}">
+                                             <f:selectItems value="#{profesorBean.materias}" var="r"
+                                                            itemLabel="#{r.nombre}" itemValue="#{r.idmateria}">
+                                </f:selectItems>
+                            </p:selectOneMenu> 
+                            <p:selectOneMenu value="#{profesorBean.profesor.materia.idmateria}">
+                                <f:selectItems value="#{profesorBean.materias}" var="r"
+                                               itemLabel="#{r.nombre}" itemValue="#{r.idmateria}">
+                                </f:selectItems>
+                            </p:selectOneMenu> 
+                        </h:panelGrid>
+                        <p:commandButton value="#{str.buttonSave}"
+                                         action="#{profesorBean.guardar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonDelete}"
+                                         action="#{profesorBean.eliminar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonCancel}"
+                                         action="#{profesorBean.cancelar()}"></p:commandButton>
+                    </h:form>
+
+                </p:fieldset>
+            </ui:define>
+        </ui:composition> 
+    </h:body>
+</html>
+
